@@ -363,7 +363,7 @@ def calculation(x_exp, y_exp, B, er_B):
     print('epsilon =', epsilon)
 
 
-# first graph
+# first graphh
 # I28, U28 = data_reader('MyData.csv', 28, 539)
 # I37, U37 = data_reader('MyData.csv', 37, 539)
 # I46, U46 = data_reader('MyData.csv', 46, 539)
