@@ -355,7 +355,7 @@ def data_reader(name, contacts, B):
 
 def calculation(x_exp, y_exp, B, er_B):
     k = np.polyfit(x_exp, y_exp, 1)
-    er_k, er_b = error_of_exp(x_exp, y_exp, 1)
+    er_k, er_b = error_of_exp(x_exp, y_exp, 10)
     h = 50e-9  # толщина образца
     epsilon = ((er_k / k[0])**2 + (er_B / B)**2)**0.5
     delta = epsilon * abs(k[0] * h / B)
@@ -367,17 +367,17 @@ def calculation(x_exp, y_exp, B, er_B):
 # I28, U28 = data_reader('MyData.csv', 28, 539)
 # I37, U37 = data_reader('MyData.csv', 37, 539)
 # I46, U46 = data_reader('MyData.csv', 46, 539)
-#
+
 # error_of_exp(I28, U28)
 # calculation(I28, U28, 539, 10)
 # error_of_exp(I37, U37)
 # calculation(I37, U37,  539, 10)
 # error_of_exp(I46, U46)
 # calculation(I46, U46,  539, 10)
-#
+
 # plot_3_in_1(I28, U28, 'Контакты 2, 8', 0, 0,
 #       I37, U37, 'Контакты 3, 7', 0, 0,
-#       I46, U46, 'Контакты 4, 6', 0, 0, 'I, мА', r'$U_H, мВ$', 'on')
+#       I46, U46, 'Контакты 4, 6', 0, 0, 'I, мА', r'$U_H, мВ$')
 
 #second graph
 
@@ -398,7 +398,7 @@ calculation(I4, U4,  1103, 1)
 plot_4_in_1(I1, U1, '$B = 539 $ Тл', 0, 0,
       I2, U2, '$B = 696 $ Тл', 0, 0,
       I3, U3, '$B = 912 $ Тл', 0, 0,
-      I4, U4, '$B = 1103 $ Тл', 0, 0, 'I, мА', r'$U_H, мВ$', 'on')
+      I4, U4, '$B = 1103 $ Тл', 0, 0, 'I, мА', r'$U_H, мВ$')
 
 
 
